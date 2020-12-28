@@ -1,0 +1,6 @@
+﻿SET IDENTITY_INSERT [dbo].[Posts] ON
+INSERT INTO [dbo].[Posts] ([PostId], [BlogId], [Title], [Date], [Permalink], [Content]) VALUES (1, 1, N'Definition of a Year', N'2020-12-28T13:37:47-0400', N'https://localhost:4954/blogs/outer-space-factoids/posts/definition-of-a-year', N'A planet''s year is the time it takes to go once around its parent star.')
+INSERT INTO [dbo].[Posts] ([PostId], [BlogId], [Title], [Date], [Permalink], [Content]) VALUES (2, 1, N'Distance to Proxima Centauri', N'2020-12-28T14:47:29-0400', N'https://localhost:4954/blogs/outer-space-factoids/posts/distance-to-proxima-centauri', N'The Proxima Centauri system is the closest to our Solar System.  It''s 4.24 light-years away.')
+INSERT INTO [dbo].[Posts] ([PostId], [BlogId], [Title], [Date], [Permalink], [Content]) VALUES (3, 2, N'My first blog post!', N'2020-12-28T11:07:49-0400', N'https://localhost:4954/blogs/blog-about-my-dog/posts/my-first-blog-post', N'I have a dog, and his name is Bruce.  This is the content of my first blog post.')
+INSERT INTO [dbo].[Posts] ([PostId], [BlogId], [Title], [Date], [Permalink], [Content]) VALUES (4, 2, N'Turtles are cool!', N'2020-12-28T12:15:13-0400', N'https://localhost:4954/blogs/blog-about-my-dog/posts/turtles-are-cool', N'I like turtles.  They are cool.  Especially teenage, mutant, ninja ones.')
+SET IDENTITY_INSERT [dbo].[Posts] OFF

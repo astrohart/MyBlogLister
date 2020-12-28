@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="01 CREATE Blogging Database.sql" />
     <Content Include="02 INSERT DATA into Blogs.sql" />
+    <Content Include="03 INSERT DATA into Posts.sql" />
     <Content Include="Blogging.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
