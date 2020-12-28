@@ -46,12 +46,42 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Blog.cs">
+      <DependentUpon>Blogging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Blogging.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Blogging.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Blogging.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Blogging.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Blogging.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Blogging.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Post.cs">
+      <DependentUpon>Blogging.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,13 +100,39 @@
     <Content Include="01 CREATE Blogging Database.sql" />
     <Content Include="02 INSERT DATA into Blogs.sql" />
     <Content Include="03 INSERT DATA into Posts.sql" />
+    <Content Include="Blogging.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Blogging.Context.cs</LastGenOutput>
+      <DependentUpon>Blogging.edmx</DependentUpon>
+    </Content>
     <Content Include="Blogging.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Blogging.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Blogging.edmx</DependentUpon>
+      <LastGenOutput>Blogging.cs</LastGenOutput>
     </Content>
     <Content Include="Blogging_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Blogging.mdf</DependentUpon>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Blogging.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Blogging.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Blogging.edmx.diagram">
+      <DependentUpon>Blogging.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
