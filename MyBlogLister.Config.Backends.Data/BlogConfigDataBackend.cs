@@ -29,7 +29,7 @@ namespace MyBlogLister.Config.Backends.Data
         {
         }
 
-        private void ValidateConnectionString(string connectionString)
+        private static void ValidateConnectionString(string connectionString)
         {
             if (string.IsNullOrWhiteSpace(connectionString))
                 throw new ArgumentException(
