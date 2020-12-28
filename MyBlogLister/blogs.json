@@ -1,44 +1,44 @@
 {
-	"blogs": [
-		{
-			"name": "Outer Space Factoids",
-			"date": "2020-12-28T13:37:47-0400",
-			"author": "astroguy343",
-			"permalink": "https://localhost:4954/blogs/outer-space-factoids/",
-			"posts": [
-				{
-					"title": "Distance to Proxima Centauri",
-					"date": "2020-12-28T14:47:29-0400",
-					"content": "The Proxima Centauri system is the closest to our Solar System.  It's 4.24 light-years away.",
-					"permalink": "https://localhost:4954/blogs/outer-space-factoids/posts/distance-to-proxima-centauri"
-				},
-				{
-					"title": "Definition of a Year",
-					"date": "2020-12-28T13:37:47-0400",
-					"content": "A planet's year is the time it takes to go once around its parent star.",
-					"permalink": "https://localhost:4954/blogs/outer-space-factoids/posts/definition-of-a-year"
-				}
-			]
-		},
-		{
-			"name": "Blog About my Dog",
-			"date": "2020-12-28T11:07:49-0400",
-			"author": "astroguy343",
-			"permalink": "https://localhost:4954/blogs/blog-about-my-dog/",
-			"posts": [
-				{
-					"title": "Turtles are cool!",
-					"date": "2020-12-28T12:15:13-0400",
-					"content": "I like turtles.  They are cool.  Especially teenage, mutant, ninja ones.",
-					"permalink": "https://localhost:4954/blogs/blog-about-my-dog/posts/turtles-are-cool"
-				},
-				{
-					"title": "My first blog post!",
-					"date": "2020-12-28T11:07:49-0400",
-					"content": "I have a dog, and his name is Bruce.  This is the content of my first blog post.",
-					"permalink": "https://localhost:4954/blogs/blog-about-my-dog/posts/my-first-blog-post"
-				}
-			]
-		}
-	]
+  "blogs": [
+    {
+      "name": "Outer Space Factoids",
+      "date": "2020-12-28T13:37:47-0400",
+      "author": "astroguy343",
+      "permalink": "https://localhost:4954/blogs/outer-space-factoids/",
+      "posts": [
+        {
+          "title": "Distance to Proxima Centauri",
+          "date": "2020-12-28T14:47:29-0400",
+          "content": "The Proxima Centauri system is the closest to our Solar System.  It's 4.24 light-years away.",
+          "permalink": "https://localhost:4954/blogs/outer-space-factoids/posts/distance-to-proxima-centauri"
+        },
+        {
+          "title": "Definition of a Year",
+          "date": "2020-12-28T13:37:47-0400",
+          "content": "A planet's year is the time it takes to go once around its parent star.",
+          "permalink": "https://localhost:4954/blogs/outer-space-factoids/posts/definition-of-a-year"
+        }
+      ]
+    },
+    {
+      "name": "Blog About my Dog",
+      "date": "2020-12-28T11:07:49-0400",
+      "author": "astroguy343",
+      "permalink": "https://localhost:4954/blogs/blog-about-my-dog/",
+      "posts": [
+        {
+          "title": "Turtles are cool!",
+          "date": "2020-12-28T12:15:13-0400",
+          "content": "I like turtles.  They are cool.  Especially teenage, mutant, ninja ones.",
+          "permalink": "https://localhost:4954/blogs/blog-about-my-dog/posts/turtles-are-cool"
+        },
+        {
+          "title": "My first blog post!",
+          "date": "2020-12-28T11:07:49-0400",
+          "content": "I have a dog, and his name is Bruce.  This is the content of my first blog post.",
+          "permalink": "https://localhost:4954/blogs/blog-about-my-dog/posts/my-first-blog-post"
+        }
+      ]
+    }
+  ]
 }

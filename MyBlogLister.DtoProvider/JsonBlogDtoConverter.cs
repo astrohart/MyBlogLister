@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using AutoMapper;
+﻿using AutoMapper;
 using MyBlogLister.Interfaces;
 using MyBlogLister.Json.Models;
 
@@ -12,9 +11,14 @@ namespace MyBlogLister.DtoProvider
                 cfg =>
                 {
                     cfg.CreateMap<JsonBlog, BlogDto>().ForMember(
-                        dto => dto.Posts, map => map.MapFrom(src => src.Posts)
-                    );
-                    cfg.CreateMap<List<JsonPost>, List<IPostDto>>();
+                            dto => dto.Posts,
+                            map => map.MapFrom(src => src.Posts)
+                        ).ForMember(x => x.BlogId, opt => opt.Ignore())
+                        .ReverseMap();
+                    cfg.CreateMap<JsonPost, IPostDto>()
+                        .ForMember(x => x.PostId, opt => opt.Ignore())
+                        .ForMember(x => x.BlogId, opt => opt.Ignore())
+                        .ReverseMap();
                 }
             );
 

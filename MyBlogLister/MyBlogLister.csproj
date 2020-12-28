@@ -53,6 +53,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MyBlogLister.Config.Backends.Data\MyBlogLister.Config.Backends.Data.csproj">
+      <Project>{a818971f-3cc9-4f92-a69c-be7e06028da8}</Project>
+      <Name>MyBlogLister.Config.Backends.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyBlogLister.Config.Backends.Json\MyBlogLister.Config.Backends.Json.csproj">
       <Project>{0B993AE3-6BDF-4946-999A-18FD6C4C13C3}</Project>
       <Name>MyBlogLister.Config.Backends.Json</Name>

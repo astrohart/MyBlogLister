@@ -263,7 +263,7 @@ namespace MyBlogLister.BusinessLayer.BusinessLayer
                 return false;
         
             if (!BloggingConnectionTester
-                .IsDatabaseOnline())
+                .IsDatabaseOnline(connectionString))
                 {
                     OnDatabaseNotAvailable();
                     return false;

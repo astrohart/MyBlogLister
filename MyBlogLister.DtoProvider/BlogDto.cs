@@ -6,6 +6,7 @@ namespace MyBlogLister.DtoProvider
     public class BlogDto : IBlogDto
     {
         public string Author { get; set; }
+        public int BlogId { get; set; }
         public string Date { get; set; }
         public string Name { get; set; }
         public string Permalink { get; set; }

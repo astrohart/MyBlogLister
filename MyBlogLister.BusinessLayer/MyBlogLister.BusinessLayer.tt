@@ -840,7 +840,7 @@ protected virtual bool OnCreateContext(string connectionString)
         return false;
 
     if (!<#=        GetDataSourceName(efContext)#>ConnectionTester
-        .IsDatabaseOnline())
+        .IsDatabaseOnline(connectionString))
         {
             OnDatabaseNotAvailable();
             return false;

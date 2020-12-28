@@ -64,6 +64,7 @@
     <Compile Include="Blog.cs">
       <DependentUpon>Blogging.tt</DependentUpon>
     </Compile>
+    <Compile Include="Blog.CustomPart.cs" />
     <Compile Include="Blogging.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -82,6 +83,7 @@
     <Compile Include="Post.cs">
       <DependentUpon>Blogging.tt</DependentUpon>
     </Compile>
+    <Compile Include="Post.CustomPart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +135,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyBlogLister.Interfaces\MyBlogLister.Interfaces.csproj">
+      <Project>{c1f88483-ceb7-4dab-9703-9280352d3f23}</Project>
+      <Name>MyBlogLister.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

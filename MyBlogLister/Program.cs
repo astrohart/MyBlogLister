@@ -2,7 +2,7 @@
 using System.IO;
 using System.Reflection;
 using MyBlogLister.Config;
-using MyBlogLister.Config.Backends.Json;
+using MyBlogLister.Config.Backends.Data;
 
 namespace MyBlogLister
 {
@@ -16,8 +16,10 @@ namespace MyBlogLister
 
         public static void Main(string[] args)
         {
-            BlogConfigProvider.Backend =
-                new BlogConfigJsonBackend(BlogJsonFileLocation);
+            BlogConfigProvider.Backend = new BlogConfigDataBackend(
+                @"data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\Blogging.mdf;integrated security=True;MultipleActiveResultSets=True;"
+            );
+            //new BlogConfigJsonBackend(BlogJsonFileLocation);
 
             Console.WriteLine("Here are your blogs:\n");
 
