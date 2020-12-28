@@ -37,11 +37,32 @@ namespace MyBlogLister.Config.Backends.Json
                 );
 
             return BlogSerializer.FromJson(jsonContent).Blogs
-                .Select(BlogDtoConverter.ToBlogDto);
+                .Select(JsonBlogDtoConverter.ToBlogDto);
         }
 
-        public void Save(dynamic dataSourceName, IEnumerable<IBlogDto> data) =>
-            throw new NotImplementedException();
+        public void Save(dynamic dataSourceName, IEnumerable<IBlogDto> data)
+        {
+            var dataToSave = data.ToList();
+            if (!dataToSave.Any()) return;
+
+            if (string.IsNullOrWhiteSpace(dataSourceName))
+                throw new ArgumentException(
+                    "Value cannot be null or whitespace.",
+                    nameof(dataSourceName)
+                );
+
+            var blogUniverseToSave = new BlogUniverse
+            {
+                Blogs = dataToSave.Cast<BlogDto>()
+                    .Select(JsonBlogDtoConverter.ToBlog).ToList()
+            };
+            var content = blogUniverseToSave.ToJson();
+
+            if (File.Exists(dataSourceName))
+                File.Delete(dataSourceName);
+
+            File.WriteAllText(dataSourceName, content);
+        }
 
         private static void ValidateConfigFilePath(string configFilePath)
         {
