@@ -27,7 +27,6 @@ namespace MyBlogLister.Config.Backends.Data
 
         public void Save(dynamic dataSourceName, IEnumerable<IBlogDto> data)
         {
-            foreach (var blog in data) { }
         }
 
         private void ValidateConnectionString(string connectionString)
