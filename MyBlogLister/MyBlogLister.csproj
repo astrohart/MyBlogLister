@@ -37,6 +37,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSourceType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -50,6 +51,10 @@
     <ProjectReference Include="..\MyBlogLister.Config.Backends.Data\MyBlogLister.Config.Backends.Data.csproj">
       <Project>{a818971f-3cc9-4f92-a69c-be7e06028da8}</Project>
       <Name>MyBlogLister.Config.Backends.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyBlogLister.Config.Backends.Json\MyBlogLister.Config.Backends.Json.csproj">
+      <Project>{0b993ae3-6bdf-4946-999a-18fd6c4c13c3}</Project>
+      <Name>MyBlogLister.Config.Backends.Json</Name>
     </ProjectReference>
     <ProjectReference Include="..\MyBlogLister.Config\MyBlogLister.Config.csproj">
       <Project>{fd0e444e-350d-49cb-ae1a-a8d671e8e3a6}</Project>
