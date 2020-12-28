@@ -82,7 +82,7 @@
            Data Access Layer which is derived from DbContext or some descendant
            of it.
          - NOTE: This .tt file assumes that the name of your DbContext follows the 
-           convention <name-of-database>DbContext or <name-of-database>Context.
+           convention <name-of-database>DbContext or <name-of-database>Entities.
          - If it does not adhere to this convention, modify the GetDataSourceName() method,
            declared below, to return a string containing the name of the specific database
            that data is being pulled from.
