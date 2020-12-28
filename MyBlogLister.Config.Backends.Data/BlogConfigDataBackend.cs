@@ -21,11 +21,9 @@ namespace MyBlogLister.Config.Backends.Data
 
         public IEnumerable<IBlogDto> Blogs { get; }
 
-        public IEnumerable<IBlogDto> Load(dynamic dataSourceName)
-        {
-            return BlogService.Instance.GetAll()
-                .Select(DbBlogDtoConverter.ToBlogDto).ToList();
-        }
+        public IEnumerable<IBlogDto> Load(dynamic dataSourceName) =>
+            BlogService.Instance.GetAll().Select(DbBlogDtoConverter.ToBlogDto)
+                .ToList();
 
         public void Save(dynamic dataSourceName, IEnumerable<IBlogDto> data)
         {
