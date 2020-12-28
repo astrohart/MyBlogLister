@@ -44,7 +44,9 @@
     <Compile Include="IBackend.cs" />
     <Compile Include="IBlog.cs" />
     <Compile Include="IBlogConfigBackend.cs" />
+    <Compile Include="IBlogDto.cs" />
     <Compile Include="IPost.cs" />
+    <Compile Include="IPostDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

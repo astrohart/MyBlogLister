@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0B993AE3-6BDF-4946-999A-18FD6C4C13C3}</ProjectGuid>
+    <ProjectGuid>{FABA8C1C-5B7F-4704-841C-8662587183CF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyBlogLister.Config.Backends.Json</RootNamespace>
-    <AssemblyName>MyBlogLister.Config.Backends.Json</AssemblyName>
+    <RootNamespace>MyBlogLister.Json.Models</RootNamespace>
+    <AssemblyName>MyBlogLister.Json.Models</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,22 +44,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BlogConfigJsonBackend.cs" />
+    <Compile Include="Blog.cs" />
+    <Compile Include="BlogConverter.cs" />
+    <Compile Include="BlogSerializer.cs" />
+    <Compile Include="BlogUniverse.cs" />
+    <Compile Include="Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyBlogLister.DtoProvider\MyBlogLister.DtoProvider.csproj">
-      <Project>{9ec7efb3-ce90-4205-b0f5-b360d00616b4}</Project>
-      <Name>MyBlogLister.DtoProvider</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MyBlogLister.Interfaces\MyBlogLister.Interfaces.csproj">
       <Project>{c1f88483-ceb7-4dab-9703-9280352d3f23}</Project>
       <Name>MyBlogLister.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MyBlogLister.Json.Models\MyBlogLister.Json.Models.csproj">
-      <Project>{FABA8C1C-5B7F-4704-841C-8662587183CF}</Project>
-      <Name>MyBlogLister.Json.Models</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

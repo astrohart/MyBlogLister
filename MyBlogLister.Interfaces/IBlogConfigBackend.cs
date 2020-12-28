@@ -2,8 +2,8 @@
 
 namespace MyBlogLister.Interfaces
 {
-    public interface IBlogConfigBackend : IBackend<IBlog>
+    public interface IBlogConfigBackend : IBackend<IBlogDto>
     {
-        IEnumerable<IBlog> Blogs { get; }
+        IEnumerable<IBlogDto> Blogs { get; }
     }
 }
