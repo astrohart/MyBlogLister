@@ -37,5 +37,11 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyBlogLister.Data\MyBlogLister.Data.csproj">
+      <Project>{911d99a3-bee5-45fa-8e0a-407969497d3c}</Project>
+      <Name>MyBlogLister.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
