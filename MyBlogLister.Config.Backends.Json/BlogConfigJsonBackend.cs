@@ -4,7 +4,7 @@ using MyBlogLister.Interfaces;
 
 namespace MyBlogLister.Config.Backends.Json
 {
-    internal class BlogConfigJsonBackend : IBlogConfigBackend
+    public class BlogConfigJsonBackend : IBlogConfigBackend
     {
         /// <summary>Constructs a new instance of <see cref="T:MyBlogLister.Config.Backends.Json.BlogConfigJsonBackend" /> and returns a reference to it.</summary>
         public BlogConfigJsonBackend()
