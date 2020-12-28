@@ -55,9 +55,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlogDto.cs" />
-    <Compile Include="BlogDtoConverter.cs" />
+    <Compile Include="JsonBlogDtoConverter.cs" />
     <Compile Include="PostDto.cs" />
-    <Compile Include="BlogProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

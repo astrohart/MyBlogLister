@@ -5,23 +5,23 @@ using MyBlogLister.Json.Models;
 
 namespace MyBlogLister.DtoProvider
 {
-    public static class BlogDtoConverter
+    public static class JsonBlogDtoConverter
     {
         private static readonly MapperConfiguration _config =
             new MapperConfiguration(
                 cfg =>
                 {
-                    cfg.CreateMap<List<Post>, List<IPostDto>>();
-                    cfg.CreateMap<Blog, BlogDto>().ForMember(
+                    cfg.CreateMap<JsonBlog, BlogDto>().ForMember(
                         dto => dto.Posts, map => map.MapFrom(src => src.Posts)
                     );
+                    cfg.CreateMap<List<JsonPost>, List<IPostDto>>();
                 }
             );
 
-        public static Blog ToBlog(this BlogDto dto) =>
-            new Mapper(_config).Map<BlogDto, Blog>(dto);
+        public static JsonBlog ToBlog(this BlogDto dto) =>
+            new Mapper(_config).Map<BlogDto, JsonBlog>(dto);
 
-        public static BlogDto ToBlogDto(this Blog blog) =>
-            new Mapper(_config).Map<Blog, BlogDto>(blog);
+        public static BlogDto ToBlogDto(this JsonBlog jsonBlog) =>
+            new Mapper(_config).Map<JsonBlog, BlogDto>(jsonBlog);
     }
 }
