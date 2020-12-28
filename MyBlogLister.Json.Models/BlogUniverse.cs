@@ -5,6 +5,6 @@ namespace MyBlogLister.Json.Models
 {
     public class BlogUniverse
     {
-        [JsonProperty("blogs")] public List<Blog> Blogs { get; set; }
+        [JsonProperty("blogs")] public List<JsonBlog> Blogs { get; set; }
     }
 }

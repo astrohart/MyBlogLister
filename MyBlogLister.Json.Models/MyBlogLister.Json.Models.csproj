@@ -44,11 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Blog.cs" />
+    <Compile Include="JsonBlog.cs" />
     <Compile Include="BlogConverter.cs" />
     <Compile Include="BlogSerializer.cs" />
     <Compile Include="BlogUniverse.cs" />
-    <Compile Include="Post.cs" />
+    <Compile Include="JsonPost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

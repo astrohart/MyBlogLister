@@ -2,7 +2,7 @@
 
 namespace MyBlogLister.Json.Models
 {
-    public class Post
+    public class JsonPost
     {
         [JsonProperty("content")] public string Content { get; set; }
         [JsonProperty("date")] public string Date { get; set; }
