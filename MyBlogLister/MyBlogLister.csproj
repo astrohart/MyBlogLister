@@ -35,12 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -57,25 +51,13 @@
       <Project>{a818971f-3cc9-4f92-a69c-be7e06028da8}</Project>
       <Name>MyBlogLister.Config.Backends.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MyBlogLister.Config.Backends.Json\MyBlogLister.Config.Backends.Json.csproj">
-      <Project>{0B993AE3-6BDF-4946-999A-18FD6C4C13C3}</Project>
-      <Name>MyBlogLister.Config.Backends.Json</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MyBlogLister.Config\MyBlogLister.Config.csproj">
       <Project>{fd0e444e-350d-49cb-ae1a-a8d671e8e3a6}</Project>
       <Name>MyBlogLister.Config</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MyBlogLister.DtoProvider\MyBlogLister.DtoProvider.csproj">
-      <Project>{9EC7EFB3-CE90-4205-B0F5-B360D00616B4}</Project>
-      <Name>MyBlogLister.DtoProvider</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MyBlogLister.Interfaces\MyBlogLister.Interfaces.csproj">
       <Project>{c1f88483-ceb7-4dab-9703-9280352d3f23}</Project>
       <Name>MyBlogLister.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MyBlogLister.Json.Models\MyBlogLister.Json.Models.csproj">
-      <Project>{FABA8C1C-5B7F-4704-841C-8662587183CF}</Project>
-      <Name>MyBlogLister.Json.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
