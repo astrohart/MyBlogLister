@@ -16,6 +16,10 @@ namespace MyBlogLister.Data
         public BloggingContext(string connectionString = "name=BloggingContext")
             : base(connectionString)
         {
+    
+            // hack to force the EntityFramework.SqlServer.dll
+            //  to be copied when another project references this one
+            var forceDllCopy = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

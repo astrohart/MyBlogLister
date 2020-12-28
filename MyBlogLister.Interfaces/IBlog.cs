@@ -2,7 +2,7 @@
 
 namespace MyBlogLister.Interfaces
 {
-    public interface IBlog
+    public interface IBlog<TPost> where TPost : IPost
     {
         string Author { get; set; }
         int BlogId { get; set; }
@@ -11,6 +11,6 @@ namespace MyBlogLister.Interfaces
         string Name { get; set; }
         string Permalink { get; set; }
 
-        ICollection<IPost> Posts { get; set; }
+        ICollection<TPost> Posts { get; set; }
     }
 }

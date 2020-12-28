@@ -2,5 +2,5 @@
 
 namespace MyBlogLister.Data
 {
-    public partial class Blog : IBlog { }
+    public partial class Blog : IBlog<Post> { }
 }

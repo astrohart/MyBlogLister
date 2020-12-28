@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MyBlogLister.Data;
 using MyBlogLister.Interfaces;
 
 namespace MyBlogLister.DtoProvider
@@ -9,15 +10,15 @@ namespace MyBlogLister.DtoProvider
             new MapperConfiguration(
                 cfg =>
                 {
-                    cfg.CreateMap<IBlog, BlogDto>().ReverseMap();
+                    cfg.CreateMap<IBlog<Post>, BlogDto>().ReverseMap();
                     cfg.CreateMap<IPost, IPostDto>().ReverseMap();
                 }
             );
 
-        public static IBlog ToBlog(this BlogDto dto) =>
-            new Mapper(_config).Map<BlogDto, IBlog>(dto);
+        public static IBlog<Post> ToBlog(this BlogDto dto) =>
+            new Mapper(_config).Map<BlogDto, IBlog<Post>>(dto);
 
-        public static BlogDto ToBlogDto(this IBlog jsonBlog) =>
-            new Mapper(_config).Map<IBlog, BlogDto>(jsonBlog);
+        public static BlogDto ToBlogDto(this IBlog<Post> dataBlog) =>
+            new Mapper(_config).Map<IBlog<Post>, BlogDto>(dataBlog);
     }
 }

@@ -47,6 +47,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MyBlogLister.Data\MyBlogLister.Data.csproj">
+      <Project>{911d99a3-bee5-45fa-8e0a-407969497d3c}</Project>
+      <Name>MyBlogLister.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyBlogLister.Interfaces\MyBlogLister.Interfaces.csproj">
       <Project>{c1f88483-ceb7-4dab-9703-9280352d3f23}</Project>
       <Name>MyBlogLister.Interfaces</Name>

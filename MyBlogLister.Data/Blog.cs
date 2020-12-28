@@ -10,7 +10,7 @@ namespace MyBlogLister.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Blog()
         {
-            this.Posts = new HashSet<IPost>();
+            this.Posts = new HashSet<Post>();
         }
     
         public int BlogId { get; set; }
@@ -20,6 +20,6 @@ namespace MyBlogLister.Data
         public string Permalink { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<IPost> Posts { get; set; }
+        public virtual ICollection<Post> Posts { get; set; }
     }
 }

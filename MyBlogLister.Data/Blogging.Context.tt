@@ -56,6 +56,10 @@ using System.Linq;
     public <#=code.Escape(container)#>(string connectionString = "name=<#=container.Name#>")
         : base(connectionString)
     {
+
+        // hack to force the EntityFramework.SqlServer.dll
+        //  to be copied when another project references this one
+        var forceDllCopy = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
 <#
 if (!loader.IsLazyLoadingEnabled(container))
 {

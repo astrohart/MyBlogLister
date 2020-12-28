@@ -17,7 +17,7 @@ namespace MyBlogLister
         public static void Main(string[] args)
         {
             BlogConfigProvider.Backend = new BlogConfigDataBackend(
-                @"data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\Blogging.mdf;integrated security=True;MultipleActiveResultSets=True;"
+                @"data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=D:\Users\NCWDG_Developer\source\repos\astrohart\MyBlogLister\MyBlogLister.Data\bin\Debug\Blogging.mdf;integrated security=True;MultipleActiveResultSets=True;"
             );
             //new BlogConfigJsonBackend(BlogJsonFileLocation);
 
