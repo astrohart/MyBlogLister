@@ -23,7 +23,7 @@ namespace MyBlogLister
             while (MainMenu()) { }
         }
 
-        private static void DislpayBlogs(DataSourceType type)
+        private static void DisplayBlogs(DataSourceType type)
         {
             Console.Clear();
             Console.WriteLine(
@@ -45,20 +45,35 @@ namespace MyBlogLister
             Console.ReadKey();
         }
 
-        private static void LoadBlogsFromDatabase()
+        private static void LoadBlogsFrom(DataSourceType type)
         {
-            BlogConfigProvider.Backend =
-                new BlogConfigDataBackend(BlogDatabaseConnectionString);
-            DislpayBlogs(DataSourceType.Database);
+            switch (type)
+            {
+                case DataSourceType.JsonFile:
+                    LoadBlogsFromJsonFile();
+                    break;
+
+                case DataSourceType.Database:
+                    LoadBlogsFromDatabase();
+                    break;
+
+                default:
+                    throw new ArgumentOutOfRangeException(
+                        nameof(type), type, null
+                    );
+            }
+
+            DisplayBlogs(type);
         }
 
-        private static void LoadBlogsFromJsonFile()
-        {
+        private static void LoadBlogsFromDatabase() =>
+            BlogConfigProvider.Backend =
+                new BlogConfigDataBackend(BlogDatabaseConnectionString);
+
+        private static void LoadBlogsFromJsonFile() =>
             BlogConfigProvider.Backend = new BlogConfigJsonBackend(
                 BlogJsonFileLocation
             );
-            DislpayBlogs(DataSourceType.JsonFile);
-        }
 
         private static bool MainMenu()
         {
@@ -67,20 +82,20 @@ namespace MyBlogLister
             Console.WriteLine("1. Load Blogs from JSON file");
             Console.WriteLine("2. Load Blogs from Database");
             Console.WriteLine("3. Exit");
-            Console.Write("\r\nSelect an option: ");
+            Console.Write("\n> Select an option: (1-3) > ");
 
             switch (Console.ReadLine())
             {
                 case "1":
-                    LoadBlogsFromJsonFile();
+                    LoadBlogsFrom(DataSourceType.JsonFile);
                     return true;
 
                 case "2":
-                    LoadBlogsFromDatabase();
+                    LoadBlogsFrom(DataSourceType.Database);
                     return true;
 
                 case "3":
-                    return false;
+                    return false; // causes the Program.Main() method to quit
 
                 default:
                     return true;
